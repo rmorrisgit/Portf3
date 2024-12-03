@@ -34,11 +34,11 @@
   </div>
 
   <!-- Main Container -->
-  <div class="grid grid-cols-12 min-h-[calc(100vh-4rem)]">
+  <div class="grid" style="grid-template-columns: 1.7fr 8.6fr 1.7fr; min-height: calc(100vh - 4rem);">
     <!-- Left Sidebar -->
-    <aside class="col-span-2 bg-black px-6 py-8 space-y-6 border-r border-gray-700">
+    <aside class="bg-black py-8 px-4 space-y-6 border-r border-gray-700">
       <!-- Profile Picture with Aligned UI Brackets -->
-      <div class="relative w-full pl-4">
+      <div class="relative w-full">
         <div class="aspect-square border border-gray-700 relative">
           <!-- UI Brackets -->
           <div class="absolute inset-0 pointer-events-none">
@@ -51,7 +51,7 @@
       </div>
 
       <!-- Info Section with Left Padding -->
-      <div class="space-y-6 pl-4">
+      <div class="space-y-6">
         <div>
           <p class="text-sm font-bold uppercase">Name</p>
           <p class="text-lg font-semibold">Ryan Morris</p>
@@ -80,8 +80,8 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="col-span-8 bg-black px-4 py-8 flex flex-col">
-      <!-- Main View with Dynamic Height -->
+    <main class="bg-black flex flex-col">
+      <!-- Main View with Exact Width -->
       <div class="relative flex-1 border border-gray-700 bg-gradient-to-b from-[#0c1d35] via-[#0b1623] to-black">
         <!-- UI Brackets -->
         <div class="absolute inset-0 pointer-events-none">
@@ -113,7 +113,7 @@
     </main>
 
     <!-- Right Sidebar -->
-    <aside class="col-span-2 bg-black px-4 py-8 space-y-6 border-l border-gray-700">
+    <aside class="bg-black py-8 px-4 space-y-6 border-l border-gray-700">
       <!-- Buttons/Options -->
       <div class="space-y-4">
         <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700 w-full">
