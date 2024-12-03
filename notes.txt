@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUD Design</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scrollbar for sleek design */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #444;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: #222;
+    }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen font-sans">
+  <!-- Top Navigation Bar -->
+  <div class="w-full bg-black border-b border-gray-700 px-6 py-4 flex justify-between items-center">
+    <div class="space-x-6">
+      <button class="text-sm uppercase hover:text-gray-400">Button</button>
+      <button class="text-sm uppercase hover:text-gray-400">Button</button>
+      <button class="text-sm uppercase hover:text-gray-400">Button</button>
+    </div>
+    <div>
+      <button class="text-sm uppercase hover:text-gray-400">Settings</button>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="grid grid-cols-12 min-h-[calc(100vh-4rem)]">
+    <!-- Left Sidebar -->
+    <aside class="col-span-2 bg-black px-4 py-8 space-y-6 border-r border-gray-700">
+      <!-- Profile Picture with UI Brackets -->
+      <div class="relative w-full aspect-square border border-gray-700">
+        <!-- UI Brackets -->
+        <div class="absolute inset-0 pointer-events-none">
+          <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-white"></div>
+          <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-white"></div>
+          <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-white"></div>
+          <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white"></div>
+        </div>
+      </div>
+
+      <!-- Info Section -->
+      <div class="space-y-4">
+        <div>
+          <p class="text-sm font-bold uppercase">Name</p>
+          <p class="text-lg font-semibold">Ryan Morris</p>
+        </div>
+        <div>
+          <p class="text-sm font-bold uppercase">Occupation</p>
+          <p class="text-lg font-semibold">Web Developer</p>
+        </div>
+        <div>
+          <p class="text-sm font-bold uppercase">Location</p>
+          <p class="text-lg font-semibold">Canada</p>
+        </div>
+        <div>
+          <p class="text-sm font-bold uppercase">Availability</p>
+          <button class="mt-2 px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700">
+            Open for Hire
+          </button>
+        </div>
+        <div>
+          <p class="text-sm font-bold uppercase">Social</p>
+          <button class="mt-2 px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700">
+            Open Connection
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="col-span-8 bg-black px-4 py-8 flex flex-col">
+      <!-- Main View with Dynamic Height -->
+      <div class="relative flex-1 border border-gray-700 bg-gradient-to-b from-gray-800 via-gray-900 to-black">
+        <!-- UI Brackets -->
+        <div class="absolute inset-0 pointer-events-none">
+          <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-white"></div>
+          <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-white"></div>
+          <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-white"></div>
+          <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Navigation -->
+      <div class="mt-4 flex justify-between items-center flex-wrap gap-2">
+        <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700">
+          Beginning
+        </button>
+        <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700">
+          Logs
+        </button>
+        <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700">
+          Achievements
+        </button>
+        <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700">
+          Creations
+        </button>
+        <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700">
+          Games
+        </button>
+      </div>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="col-span-2 bg-black px-4 py-8 space-y-6 border-l border-gray-700">
+      <!-- Buttons/Options -->
+      <div class="space-y-4">
+        <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700 w-full">
+          Button
+        </button>
+        <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700 w-full">
+          Button
+        </button>
+        <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700 w-full">
+          Button
+        </button>
+      </div>
+      <div class="absolute bottom-8 right-8">
+        <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700">
+          Settings
+        </button>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>
