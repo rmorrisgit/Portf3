@@ -38,32 +38,31 @@
     background: linear-gradient(
       to right,
       #000000 0%,      /* Start color */
-      #4a64e83f 50%,     /* Middle color at 17% */
+      #4a64e83b 50%,     
       #000000 100%     /* End color */
     ); 
   
   }
 
   .custom-button {
-  background-color: rgb(228, 0, 0) ;
+  background-color: rgb(43, 43, 43) ;
 
   font-family: 'Big Shoulders Display';
   font-weight: 600;
-  padding: 0.4rem 0.6rem; /* Reduce vertical padding (top and bottom) */
+  padding: 0.9rem 0.6rem; /* Reduce vertical padding (top and bottom) */
   transition: background-color 0.3s ease, color 0.3s ease;
   letter-spacing: 2px;
   white-space: nowrap;
-  line-height: 1; /* Adjust line-height to tighten spacing */
+  line-height: .3; /* Adjust line-height to tighten spacing */
 }
 
 .custom-button:hover {
   background-color: rgb(255, 255, 255); /* Darker background on hover */
-  color: #ff9100; /* Text color changes to white on hover */
-
+  color: #000000; /* Text color changes to white on hover */
 }
 /* Default width */
 .buttons-container {
-  background-color: rgb(250, 25, 25);
+  /* background-color: rgb(250, 25, 25); */
 
 }
 @media (min-width: 1600px) {
@@ -185,20 +184,20 @@
         <div class="flex justify-center px-12">
           <!-- Buttons with adjusted spacing and sizing -->
     <!-- Buttons with adjusted spacing and sizing -->
-    <div class="grid grid-cols-5 gap-6  buttons-container w-[40vw]">
-      <button class="custom-button  border border-blue-700 text-left uppercase" style="font-size: 1.42em;">
+    <div class="grid grid-cols-5 gap-5  bg-green-500 buttons-container w-[39vw]">
+      <button class="custom-button text-left uppercase" style="font-size: 1.33em;">
         Main
       </button>
-      <button class="custom-button border border-blue-700  text-left uppercase" style="font-size: 1.42em">
+      <button class="custom-button text-left uppercase" style="font-size: 1.33em">
         Projects
       </button>
-      <button class="custom-button border border-blue-700  text-left uppercase" style="font-size: 1.42em">
+      <button class="custom-button text-left uppercase" style="font-size: 1.33em">
       Skills
       </button>
-      <button class="custom-button border border-blue-700  text-left uppercase" style="font-size: 1.42em">
+      <button class="custom-button text-left uppercase" style="font-size: 1.33em">
         About Me
       </button>
-      <button class="custom-button border border-blue-700 text-left uppercase" style="font-size: 1.42em">
+      <button class="custom-button text-left uppercase" style="font-size: 1.33em">
         Contact
       </button>
       
