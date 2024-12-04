@@ -45,6 +45,7 @@
 .info-section {
   /* background-color: green; */
   width: 200px;
+  margin-top: 42px !important;
 }
 
 
@@ -76,13 +77,13 @@
 
   <!-- Main Container -->
   <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
-    <!-- Left Sidebar -->
-    <aside class="bg-black  mt-4 px-4 space-y-6 ms-16">
-      <!-- Profile Picture -->
+    <!-- Left Sidebar bg-blue-200 -->
+    <aside class="bg-black  mt-4 px-4 space-y-6  ">
+      <!-- Profile Picture <div class="profile-pic">-->
         <div class="profile-pic relative  ms-auto">
-          <div class="aspect-square relative">
+          <div class="aspect-square relative ">
             <!-- Inner Square -->
-            <div class="absolute inset-[0px] border border-blue-800"></div>
+            <div class="absolute inset-[0px] border border-gray-800 bg-black"></div>
             <!-- UI Brackets -->
             <div class="absolute inset-0 pointer-events-none">
               <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
@@ -93,10 +94,10 @@
           </div>
         </div>
     
-      <!-- Info Section -->
-      <div class="info-section ms-auto space-y-6">
+      <!-- Info Section bg-green-200-->
+      <div class="info-section ms-auto space-y-6 ">
         <div>
-          <p class="text-sm font-bold uppercase">Name</p>
+          <p class="text-sm font-bold uppercase ">Name</p>
           <p class="text-lg font-semibold">Ryan Morris</p>
         </div>
         <div>
@@ -173,9 +174,8 @@
     <!-- Right Sidebar -->
     <aside class="bg-black mt-4 px-4 space-y-6">
       <div class="space-y-4">
-      <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700 w-full">Button</button>
-     
-      </div>
+        <div  class="px-4 py-2 border border-gray-700 text-sm uppercase hover:bg-gray-700 w-full"></div>
+      <div class="px-4  border-l border-green-700 " style="height: 300px; margin-top: -18px;"></div>
      
     </aside>
   </div>
