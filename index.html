@@ -23,7 +23,15 @@
       #000000 0%,      /* Start color */
       #4a64e83f 50%,     /* Middle color at 17% */
       #000000 100%     /* End color */
-    ); }
+    ); 
+  
+  
+  .navbg {
+    background-color: rgba(123, 140, 141, 0.26);
+  }
+  
+  
+  }
   </style>
 </head>
 <body class="bg-black text-white min-h-screen font-sans">
@@ -42,7 +50,7 @@
   <!-- Main Container -->
   <div class="grid" style="grid-template-columns: 1.7fr 8.6fr 1.7fr; min-height: calc(100vh - 4rem);">
     <!-- Left Sidebar -->
-    <aside class="bg-black mt-8 px-4 space-y-6">
+    <aside class="bg-black mt-12 px-4 space-y-6">
       <!-- Profile Picture -->
       <div class="relative w-full">
         <div class="aspect-square relative">
@@ -90,11 +98,11 @@
     <!-- Main Content -->
 <!-- Main Content -->
 <!-- Main Content pt-8 pb-16 bg-red-200 -->
-<main class="flex flex-col relative mt-8 mb-20">
+<main class="flex flex-col relative mt-12 pb-5 mb-20">
   <!-- Main View with Bottom Padding bg-black -->
   <div class="relative flex-1 custom-gradient ">
 
-    <div class="absolute inset-[0px]  border border-gray-400 "></div>
+    <div class="absolute inset-[0px]  border border-gray-800 "></div>
 
        <!-- UI Brackets -->
        <div class="absolute inset-0 pointer-events-none">
@@ -110,20 +118,20 @@
         <div class="flex justify-center px-12">
           <!-- Buttons with adjusted spacing and sizing -->
 <!-- Buttons with adjusted spacing and sizing -->
-<div class="grid grid-cols-5 gap-6 ">
-  <button class="px-2 py-3 border border-gray-700 bg-gray-800 text-sm text-left uppercase hover:bg-gray-700">
+<div class="grid grid-cols-5 gap-6 w-2/3">
+  <button class="px-2 py-3 border border-gray-700  navbg text-sm text-left uppercase hover:bg-gray-700">
     Main
   </button>
-  <button class="px-2 py-3 border border-gray-700 bg-gray-800 text-sm text-left uppercase hover:bg-gray-700">
+  <button class="px-2 py-3 border border-gray-700  navbg  text-sm text-left uppercase hover:bg-gray-700">
     Projects
   </button>
-  <button class="px-2 py-3 border border-gray-700 bg-gray-800 text-sm text-left uppercase hover:bg-gray-700">
+  <button class="px-2 py-3 border border-gray-700 navbg  text-sm text-left uppercase hover:bg-gray-700">
     Skills
   </button>
-  <button class="px-2 py-3 border border-gray-700 bg-gray-800 text-sm text-left uppercase hover:bg-gray-700">
+  <button class="px-2 py-3 border border-gray-700 navbg text-sm text-left uppercase hover:bg-gray-700">
     About Me
   </button>
-  <button class="px-2 py-3 border border-gray-700 bg-gray-800 text-sm text-left uppercase hover:bg-gray-700">
+  <button class="px-2 py-3 border border-gray-700 navbg  text-sm text-left uppercase hover:bg-gray-700">
     Contact
   </button>
 </div>
@@ -134,7 +142,7 @@
   </main>
 
     <!-- Right Sidebar -->
-    <aside class="bg-black py-8 px-4 space-y-6">
+    <aside class="bg-black mt-12 px-4 space-y-6">
       <div class="space-y-4">
         <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700 w-full">Button</button>
         <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700 w-full">Button</button>
