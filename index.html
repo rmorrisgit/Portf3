@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HUD Design</title>
+  <link href='https://fonts.googleapis.com/css?family=Big Shoulders Display' rel='stylesheet'>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     ::-webkit-scrollbar {
@@ -17,18 +18,20 @@
       background-color: #222;
     }
    
-      .custom-gradient {
+ 
+  
+  .navbg 
+    {
+      letter-spacing: 1.2px;
+    }
+
+  .custom-gradient {
     background: linear-gradient(
       to right,
       #000000 0%,      /* Start color */
       #4a64e83f 50%,     /* Middle color at 17% */
       #000000 100%     /* End color */
     ); 
-  
-  
-  .navbg {
-    background-color: rgba(123, 140, 141, 0.26);
-  }
   
   
   }
@@ -48,7 +51,7 @@
   </div>
 
   <!-- Main Container -->
-  <div class="grid" style="grid-template-columns: 1.7fr 8.6fr 1.7fr; min-height: calc(100vh - 4rem);">
+  <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
     <!-- Left Sidebar -->
     <aside class="bg-black mt-12 px-4 space-y-6">
       <!-- Profile Picture -->
@@ -58,10 +61,10 @@
           <div class="absolute inset-[0px]  border border-gray-800"></div>
           <!-- UI Brackets -->
           <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-white"></div>
-            <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-white"></div>
-            <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-white"></div>
-            <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white"></div>
+            <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
+            <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
+            <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
+            <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
           </div>
         </div>
       </div>
@@ -106,10 +109,10 @@
 
        <!-- UI Brackets -->
        <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-white"></div>
-        <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-white"></div>
-        <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-white"></div>
-        <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white"></div>
+        <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
+        <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
+        <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
+        <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
       </div>
   
       <!-- Content Area -->
@@ -118,20 +121,30 @@
         <div class="flex justify-center px-12">
           <!-- Buttons with adjusted spacing and sizing -->
 <!-- Buttons with adjusted spacing and sizing -->
-<div class="grid grid-cols-5 gap-6 w-2/3">
-  <button class="px-2 py-3 border border-gray-700  navbg text-sm text-left uppercase hover:bg-gray-700">
+<div class="grid grid-cols-5 gap-6 w-2/3 px-14">
+  <button class=" border border-gray-700  navbg text-sm text-left uppercase hover:bg-gray-700" style=" background-color: rgba(123, 140, 141, 0.26);
+  font-family: 'Big Shoulders Display' ;
+  font-size: 1.5em; padding: .6rem;" >
     Main
   </button>
-  <button class="px-2 py-3 border border-gray-700  navbg  text-sm text-left uppercase hover:bg-gray-700">
+  <button class=" border border-gray-700  navbg  text-sm text-left uppercase hover:bg-gray-700"style=" background-color: rgba(123, 140, 141, 0.26);
+  font-family: 'Big Shoulders Display';
+  font-size: 1.5em; padding: .6rem; ">
     Projects
   </button>
-  <button class="px-2 py-3 border border-gray-700 navbg  text-sm text-left uppercase hover:bg-gray-700">
+  <button class="border border-gray-700 navbg  text-sm text-left uppercase hover:bg-gray-700"style=" background-color: rgba(123, 140, 141, 0.26);
+  font-family: 'Big Shoulders Display';
+  font-size: 1.5em; padding: .6rem; ">
     Skills
   </button>
-  <button class="px-2 py-3 border border-gray-700 navbg text-sm text-left uppercase hover:bg-gray-700">
+  <button class=" border border-gray-700 navbg text-sm text-left uppercase hover:bg-gray-700"style=" background-color: rgba(123, 140, 141, 0.26);
+  font-family: 'Big Shoulders Display';
+  font-size: 1.5em;  padding: .6rem; ">
     About Me
   </button>
-  <button class="px-2 py-3 border border-gray-700 navbg  text-sm text-left uppercase hover:bg-gray-700">
+  <button class=" border border-gray-700 navbg  text-sm text-left uppercase hover:bg-gray-700"style=" background-color: rgba(123, 140, 141, 0.26);
+  font-family: 'Big Shoulders Display';
+  font-size: 1.5em; padding: .6rem;">
     Contact
   </button>
 </div>
@@ -144,9 +157,9 @@
     <!-- Right Sidebar -->
     <aside class="bg-black mt-12 px-4 space-y-6">
       <div class="space-y-4">
+        <!-- <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700 w-full">Button</button>
         <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700 w-full">Button</button>
-        <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700 w-full">Button</button>
-        <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700 w-full">Button</button>
+        <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700 w-full">Button</button> -->
       </div>
       <div class="absolute bottom-8 right-8">
         <button class="px-4 py-2 border border-gray-700 bg-gray-800 text-sm uppercase hover:bg-gray-700">
