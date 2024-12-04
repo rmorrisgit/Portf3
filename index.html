@@ -28,7 +28,8 @@
       color: #000000;
     }
 
-
+body {
+}
 
 .profile-pic {
   height: 175px;
@@ -46,7 +47,7 @@
     background: linear-gradient(
       to right,
       #000000 0%,      /* Start color */
-      #4a64e83b 50%,     
+      #4a64e81a 50%,     
       #000000 100%     /* End color */
     ); 
   
@@ -109,21 +110,18 @@
 </head>
 <body class="bg-black text-white min-h-screen font-sans">
   <!-- Top Navigation Bar -->
-  <div class="w-full bg-black px-6 py-4 flex justify-between items-center">
-    <div class="space-x-6">
-      <!-- <button class="text-sm uppercase hover:text-gray-400">Button</button>
-      <button class="text-sm uppercase hover:text-gray-400">Button</button>
-      <button class="text-sm uppercase hover:text-gray-400">Button</button> -->
-    </div>
-    <div>
-      <button class="text-sm uppercase hover:text-gray-400">GITHUB</button>
-    </div>
-  </div>
+<!-- Top Navigation Bar -->
+<div class="w-[92vw] bg-black px-10 flex items-center justify-end h-16 gap-5  ">
+  <button class="text-sm mt-3 uppercase hover:text-gray-400">Button</button>
+  <button class="text-sm  mt-3 uppercase hover:text-gray-400">Button</button>
+  <button class="text-sm  mt-3 uppercase hover:text-gray-400">Button</button>
+</div>
+
 
   <!-- Main Container -->
   <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
     <!-- Left Sidebar bg-blue-200 -->
-    <aside class="bg-black  mt-4 px-4 space-y-6  ">
+    <aside class="bg-black  mt-4  px-4 space-y-6  ">
       <!-- Profile Picture <div class="profile-pic">-->
         <div class="profile-pic relative  ms-auto">
           <div class="aspect-square relative ">
@@ -172,7 +170,7 @@
     <!-- Main Content -->
 <!-- Main Content -->
 <!-- Main Content pt-8 pb-16 bg-red-200 -->
-<main class="flex flex-col relative mt-4  mb-20">
+<main class="flex flex-col relative  mt-4  mb-20">
   <!-- Main View with Bottom Padding bg-black -->
   <div class="relative flex-1 custom-gradient ">
 
@@ -217,9 +215,9 @@
 </main>
 
     <!-- Right Sidebar -->
-    <aside class="bg-black mt-4 px-4 space-y-6">
+    <aside class="bg-black  mt-4 px-4 space-y-6">
       <div class="space-y-4">
-        <div  class="px-4 py-2 border border-gray-700 text-sm uppercase hover:bg-gray-700 w-full"></div>
+        <div  class="px-4 py-2 mt-2 border border-gray-700 text-sm uppercase hover:bg-gray-700 w-full"></div>
       <div class="px-4  border-l border-green-700 " style="height: 300px; margin-top: -18px;"></div>
      
     </aside>
