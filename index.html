@@ -16,6 +16,14 @@
     ::-webkit-scrollbar-track {
       background-color: #222;
     }
+   
+      .custom-gradient {
+    background: linear-gradient(
+      to right,
+      #000000 0%,      /* Start color */
+      #4a64e83f 50%,     /* Middle color at 17% */
+      #000000 100%     /* End color */
+    ); }
   </style>
 </head>
 <body class="bg-black text-white min-h-screen font-sans">
@@ -37,9 +45,9 @@
     <aside class="bg-black py-8 px-4 space-y-6">
       <!-- Profile Picture -->
       <div class="relative w-full">
-        <div class="aspect-square relative bg-blue-500">
+        <div class="aspect-square relative">
           <!-- Inner Square -->
-          <div class="absolute inset-[1px] bg-black"></div>
+          <div class="absolute inset-[0px]  border border-gray-400"></div>
           <!-- UI Brackets -->
           <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-white"></div>
@@ -84,8 +92,9 @@
 <!-- Main Content -->
 <main class="bg-black flex flex-col relative pt-8 pb-16">
   <!-- Main View with Bottom Padding bg-black -->
-  <div class="relative flex-1 bg-blue-500">
-    <div class="absolute inset-[1px]  border border-white"></div>
+  <div class="relative flex-1 custom-gradient">
+
+    <div class="absolute inset-[0px]  border border-gray-400"></div>
 
    
     <!-- UI Brackets -->
