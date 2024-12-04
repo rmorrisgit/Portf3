@@ -17,14 +17,36 @@
     ::-webkit-scrollbar-track {
       background-color: #222;
     }
-   
- 
- 
-  .navbg 
-    {
-      letter-spacing: 1.2px;
-      white-space: nowrap
-    }
+    .navbg 
+  {
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+  }
+
+
+    .custom-button {
+  background-color: rgba(123, 140, 141, 0.26);
+  font-family: 'Big Shoulders Display';
+  font-weight: 600;
+  padding: 0.6rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: rgba(64, 74, 75, 0.9); /* Darker background on hover */
+  color: #ffffff; /* Text color changes to white on hover */
+}
+
+.profile-pic {
+  height: 175px;
+  width: 194px;
+}
+
+.info-section {
+  /* background-color: green; */
+  width: 200px;
+}
+
 
   .custom-gradient {
     background: linear-gradient(
@@ -34,8 +56,9 @@
       #000000 100%     /* End color */
     ); 
   
-  
   }
+
+
   </style>
 </head>
 <body class="bg-black text-white min-h-screen font-sans">
@@ -54,24 +77,24 @@
   <!-- Main Container -->
   <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
     <!-- Left Sidebar -->
-    <aside class="bg-black mt-4 px-4 space-y-6 ms-14">
+    <aside class="bg-black  mt-4 px-4 space-y-6 ms-16">
       <!-- Profile Picture -->
-      <div class="relative w-full">
-        <div class="aspect-square relative">
-          <!-- Inner Square -->
-          <div class="absolute inset-[0px]  border border-gray-800"></div>
-          <!-- UI Brackets -->
-          <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
-            <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
-            <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
-            <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
+        <div class="profile-pic relative  ms-auto">
+          <div class="aspect-square relative">
+            <!-- Inner Square -->
+            <div class="absolute inset-[0px] border border-blue-800"></div>
+            <!-- UI Brackets -->
+            <div class="absolute inset-0 pointer-events-none">
+              <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
+              <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
+              <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
+              <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
+            </div>
           </div>
         </div>
-      </div>
-
+    
       <!-- Info Section -->
-      <div class="space-y-6">
+      <div class="info-section ms-auto space-y-6">
         <div>
           <p class="text-sm font-bold uppercase">Name</p>
           <p class="text-lg font-semibold">Ryan Morris</p>
@@ -97,6 +120,7 @@
           </button>
         </div>
       </div>
+      
     </aside>
 
     <!-- Main Content -->
@@ -123,31 +147,22 @@
           <!-- Buttons with adjusted spacing and sizing -->
 <!-- Buttons with adjusted spacing and sizing -->
 <div class="grid grid-cols-5 gap-6 w-2/3 px-14">
-  <button class=" border border-gray-700  navbg text-sm text-left uppercase hover:bg-gray-700" style=" background-color: rgba(123, 140, 141, 0.26);
-  font-family: 'Big Shoulders Display' ;
-  font-size: 1.5em; padding: .6rem;" >
+  <button class="custom-button border border-gray-700 navbg text-sm text-left uppercase" style="font-size: 1.35vw">
     Main
   </button>
-  <button class=" border border-gray-700  navbg  text-sm text-left uppercase hover:bg-gray-700"style=" background-color: rgba(123, 140, 141, 0.26);
-  font-family: 'Big Shoulders Display';
-  font-size: 1.5em; padding: .6rem; ">
+  <button class="custom-button border border-gray-700 navbg text-sm text-left uppercase" style="font-size: 1.35vw">
     Projects
   </button>
-  <button class="border border-gray-700 navbg  text-sm text-left uppercase hover:bg-gray-700"style=" background-color: rgba(123, 140, 141, 0.26);
-  font-family: 'Big Shoulders Display';
-  font-size: 1.5em; padding: .6rem; ">
-    Skills
+  <button class="custom-button border border-gray-700 navbg text-sm text-left uppercase" style="font-size: 1.35vw">
+  Skills
   </button>
-  <button class=" border border-gray-700 navbg text-sm text-left uppercase hover:bg-gray-700"style=" background-color: rgba(123, 140, 141, 0.26);
-  font-family: 'Big Shoulders Display';
-  font-size: 1.5em;  padding: .6rem; ">
+  <button class="custom-button border border-gray-700 navbg text-sm text-left uppercase" style="font-size: 1.35vw">
     About Me
   </button>
-  <button class=" border border-gray-700 navbg  text-sm text-left uppercase hover:bg-gray-700"style=" background-color: rgba(123, 140, 141, 0.26);
-  font-family: 'Big Shoulders Display';
-  font-size: 1.5em; padding: .6rem;">
+  <button class="custom-button border border-gray-700 navbg text-sm text-left uppercase" style="font-size: 1.35vw">
     Contact
   </button>
+  
 </div>
 
         </div>
