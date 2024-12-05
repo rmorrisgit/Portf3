@@ -86,7 +86,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      z-index: 100; /* High z-index to ensure it's above the sections */
+      z-index: 700; /* High z-index to ensure it's above the sections */
 
     }
 
@@ -112,7 +112,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 98; /* Lower z-index to render under hud-overlay */
+  z-index: 33; /* Lower z-index to render under hud-overlay */
   pointer-events: none; /* Make it non-interactive if needed */
 }
 
@@ -162,9 +162,8 @@
 </head>
 <body class="text-white min-h-screen font-sans">
 
-  <div class="hud-overlay">
-
-<!-- Top Navigation Bar -->
+<div class="hud-overlay">
+  <!-- Top Navigation Bar -->
   <div class="w-[92vw] px-10 flex items-center justify-end h-16 gap-5  ">
     <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
     <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
@@ -216,33 +215,22 @@
           </button>
         </div>
       </div>
-      
     </aside>
-
-    <!-- Main Content -->
-<!-- Main Content -->
 <!-- Main Content pt-8 pb-16 bg-red-200 -->
 <main class="flex flex-col relative fixed mt-4  mb-20">
   <!-- Main View with Bottom Padding bg-black -->
-
-    <div class="absolute inset-[0px]  border border-gray-800 "></div>
-
-       <!-- UI Brackets -->
-       <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
-        <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
-        <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
-        <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
-      </div>
-  
+  <div class="absolute inset-[0px]  border border-gray-800 "></div>
+    <!-- UI Brackets -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
+      <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
+      <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
+      <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
+  </div>
       <!-- Content Area -->
   <div class=" absolute inset-[1px] flex flex-col justify-end">
-
-
-
         <!-- Bottom Navigation inside Main View -->
-        <div class="flex justify-center px-12">
-          <!-- Buttons with adjusted spacing and sizing -->
+    <div class="flex justify-center px-12">
     <!-- Buttons with adjusted spacing and sizing -->
     <div class="grid grid-cols-5 gap-5 buttons-container w-[39vw]">
       <button class="custom-button text-left uppercase nav-button" style="font-size: 1.2em;" data-target="section1">
@@ -262,38 +250,38 @@
       </button>
     </div>
     
- <!-- lol -->
+  <!-- lol -->
+        </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>
+    <!-- Right Sidebar -->
+    <aside class="fixed right-0  bg-black px-4 space-y-6" style="height: 300px;">
+      <div class="space-y-4">
+        <!-- <div class="px-4 py-2 border border-gray-700 text-sm uppercase hover:bg-gray-700 w-full"></div>
+        <div class="px-4 border-l border-green-700" style="height: 300px; margin-top: -18px;"></div> -->
+      </div>
 
-  <!-- Right Sidebar -->
-  <aside class="fixed right-0  bg-black px-4 space-y-6" style="height: 300px;">
-    <div class="space-y-4">
-      <!-- <div class="px-4 py-2 border border-gray-700 text-sm uppercase hover:bg-gray-700 w-full"></div>
-      <div class="px-4 border-l border-green-700" style="height: 300px; margin-top: -18px;"></div> -->
-    </div>
+    </aside>
+</div>
 
-  </aside>
+<div class="second-overlay">
+  <!-- Top Navigation Bar -->
+  <div class="w-[92vw] px-10 flex items-center justify-end h-16 gap-5">
   </div>
-  <div class="second-overlay">
-    <!-- Top Navigation Bar -->
-    <div class="w-[92vw] px-10 flex items-center justify-end h-16 gap-5">
-    </div>
-    <!-- Main Container -->
-    <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
-      <!-- Left Sidebar -->
-      <aside class="top-16 left-0 px-4 space-y-6">
-      </aside>
-      <!-- Main Content -->
-      <main class="flex flex-col relative mt-4 mb-20">
-        <div class="absolute inset-[0px]  custom-gradient">
-        </div>
-      </main>
-    </div>
+  <!-- Main Container -->
+  <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
+    <!-- Left Sidebar -->
+    <aside class="top-16 left-0 px-4 space-y-6">
+    </aside>
+    <!-- Main Content -->
+    <main class="flex flex-col relative mt-4 mb-20">
+      <div class="absolute inset-[0px]  custom-gradient">
+      </div>
+    </main>
   </div>
-  
+</div>
+
 
   <!-- Main Scrollable Content -->
   <main>
@@ -301,7 +289,7 @@
     <div id="section2" class="section bg-gray-700" style="z-index: 99;"></div>
     <div id="section3" class="section bg-gray-900"style="z-index: 99;"></div>
     <div id="section4" class="section bg-green-900"style="z-index: 99;"></div>
-    <div id="section5" class="section bg-orange-900"style="z-index: 99;"></div>
+    <div id="section5" class="section bg-emerald-900 "style="z-index: 99;"></div>
   </main>
 <!-- Add GSAP Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
