@@ -52,15 +52,15 @@
 }
 
 
-  .custom-gradient {
+  /* .custom-gradient {
     background: linear-gradient(
       to right,
-      #000000 0%,      /* Start color */
+      #000000 0%,      
       #4a64e81a 50%,     
-      #000000 100%     /* End color */
+      #000000 100%     
     ); 
   
-  }
+  } */
 
   .custom-button {
   background-color: rgb(43, 43, 43) ;
@@ -106,7 +106,25 @@
       position: relative;
     }
 
- 
+    .second-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 98; /* Lower z-index to render under hud-overlay */
+  pointer-events: none; /* Make it non-interactive if needed */
+}
+
+.second-overlay .custom-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* Ensure it sits beneath other elements */
+  background: linear-gradient(to right, #000000 0%, #ae00ff 50%, #000000 100%);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
 
 @media (min-width: 1600px) {
   /* Styles for screens larger than 1600px */
@@ -244,7 +262,7 @@
       </button>
     </div>
     
-
+ <!-- lol -->
       </div>
     </div>
   </div>
@@ -259,15 +277,31 @@
 
   </aside>
   </div>
-
+  <div class="second-overlay">
+    <!-- Top Navigation Bar -->
+    <div class="w-[92vw] px-10 flex items-center justify-end h-16 gap-5">
+    </div>
+    <!-- Main Container -->
+    <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
+      <!-- Left Sidebar -->
+      <aside class="top-16 left-0 px-4 space-y-6">
+      </aside>
+      <!-- Main Content -->
+      <main class="flex flex-col relative mt-4 mb-20">
+        <div class="absolute inset-[0px] border border-gray-800 custom-gradient">
+        </div>
+      </main>
+    </div>
+  </div>
+  
 
   <!-- Main Scrollable Content -->
   <main>
     <div id="section1" class="section bg-black"></div>
-    <div id="section2" class="section bg-orange-900"></div>
-    <div id="section3" class="section bg-gray-900"></div>
-    <div id="section4" class="section bg-green-900"></div>
-    <div id="section5" class="section bg-brown-900"></div>
+    <div id="section2" class="section bg-orange-900" style="z-index: 99;"></div>
+    <div id="section3" class="section bg-gray-900"style="z-index: 99;"></div>
+    <div id="section4" class="section bg-green-900"style="z-index: 99;"></div>
+    <div id="section5" class="section bg-green-300"style="z-index: 99;"></div>
   </main>
 <!-- Add GSAP Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
