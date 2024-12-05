@@ -106,9 +106,7 @@
       position: relative;
     }
 
-    .custom-gradient {
-      background: linear-gradient(to right, #00000000 0%, #4a64e81a 50%, #00000000 100%);
-    }
+ 
 
 @media (min-width: 1600px) {
   /* Styles for screens larger than 1600px */
@@ -208,7 +206,7 @@
 <!-- Main Content pt-8 pb-16 bg-red-200 -->
 <main class="flex flex-col relative fixed mt-4  mb-20">
   <!-- Main View with Bottom Padding bg-black -->
-  <div class="relative flex-1 custom-gradient ">
+  <div class="relative flex-1 custom-gradient "> </div>
 
     <div class="absolute inset-[0px]  border border-gray-800 "></div>
 
@@ -283,66 +281,81 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
 <script>
-  // Register ScrollTrigger plugin
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-  const sections = document.querySelectorAll(".section");
-  const navButtons = document.querySelectorAll(".nav-button");
+const sections = document.querySelectorAll(".section");
+const navButtons = document.querySelectorAll(".nav-button");
+const gradientWrapper = document.querySelector(".custom-gradient");
 
-  // Variable to track if a click-based scroll is happening
-  let isAnimating = false;
+let isAnimating = false;
 
-  // Handle active navigation buttons
-  function setActiveNav(index) {
-    navButtons.forEach((btn, i) => {
-      btn.classList.toggle("active", i === index); // Toggle class for the active button
-    });
+// Handle active navigation buttons
+function setActiveNav(index) {
+  navButtons.forEach((btn, i) => {
+    btn.classList.toggle("active", i === index);
+  });
+}
+
+// Manage gradient class visibility for the wrapper
+function toggleGradient() {
+  const firstSection = document.querySelector("#section1");
+  const bounds = firstSection.getBoundingClientRect();
+
+  if (bounds.top >= 0 && bounds.bottom > 0) {
+    gradientWrapper.style.display = "block"; // Show gradient
+  } else {
+    gradientWrapper.style.display = "none"; // Hide gradient
   }
+}
 
-  // Use ScrollTrigger to manage active states during scroll
-  sections.forEach((section, index) => {
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top center",
-      end: "bottom center",
-      onEnter: () => {
-        if (!isAnimating) {
-          setActiveNav(index); // Set active only if not animating
-        }
-      },
-      onEnterBack: () => {
-        if (!isAnimating) {
-          setActiveNav(index); // Set active only if not animating
-        }
-      },
+// Use ScrollTrigger to manage active states during scroll
+sections.forEach((section, index) => {
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top center",
+    end: "bottom center",
+    onEnter: () => {
+      if (!isAnimating) {
+        setActiveNav(index);
+      }
+    },
+    onEnterBack: () => {
+      if (!isAnimating) {
+        setActiveNav(index);
+      }
+    },
+  });
+});
+
+// Add smooth scrolling to nav-button clicks
+navButtons.forEach((button, index) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Highlight the button immediately
+    setActiveNav(index);
+
+    // Temporarily disable ScrollTrigger callbacks
+    isAnimating = true;
+
+    // Smooth scroll to the target section
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: sections[index],
+      onComplete: () => (isAnimating = false),
     });
   });
+});
 
-  // Add smooth scrolling to nav-button clicks
-  navButtons.forEach((button, index) => {
-    button.addEventListener("click", (e) => {
-      e.preventDefault();
+// Ensure gradient toggling on scroll
+window.addEventListener("scroll", toggleGradient);
 
-      // Highlight the button immediately
-      setActiveNav(index);
+// Ensure page starts at the top on load
+window.onload = () => {
+  window.scrollTo(0, 0);
+  toggleGradient(); // Initialize the gradient
+};
 
-      // Temporarily disable ScrollTrigger callbacks
-      isAnimating = true;
-
-      // Smooth scroll to the target section
-      gsap.to(window, {
-        duration: 1,
-        scrollTo: {
-          y: sections[index].offsetTop,
-          autoKill: true,
-        },
-        onComplete: () => {
-          // Re-enable ScrollTrigger after the animation
-          isAnimating = false;
-        },
-      });
-    });
-  });
 </script>
 
 
