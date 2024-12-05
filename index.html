@@ -14,8 +14,8 @@
     }
     // Scroll to the top when the page loads
     window.scrollTo(0, 0);
-  </script> -->
-  
+  </script> 
+   -->
   <style>
     ::-webkit-scrollbar {
       width: 8px;
@@ -281,7 +281,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
 <script>
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  gsap.registerPlugin(ScrollTrigger);
 
 const sections = document.querySelectorAll(".section");
 const navButtons = document.querySelectorAll(".nav-button");
@@ -351,10 +351,7 @@ navButtons.forEach((button, index) => {
 window.addEventListener("scroll", toggleGradient);
 
 // Ensure page starts at the top on load
-window.onload = () => {
-  window.scrollTo(0, 0);
-  toggleGradient(); // Initialize the gradient
-};
+
 
 </script>
 
