@@ -52,7 +52,7 @@
 }
 
 
-  .custom-gradient {
+  /* .custom-gradient {
     background: linear-gradient(
       to right,
       #000000 0%,      
@@ -60,7 +60,7 @@
       #000000 100%     
     ); 
   
-  } 
+  } */
 
   .custom-button {
   background-color: rgb(43, 43, 43) ;
@@ -125,7 +125,8 @@
   transition: opacity 0.5s ease;
 }
 
-
+body {
+}
 @media (min-width: 1600px) {
   /* Styles for screens larger than 1600px */
  
@@ -164,7 +165,7 @@
 
 <div class="hud-overlay">
   <!-- Top Navigation Bar -->
-  <div class="w-100 px-10 flex items-center justify-end h-20 gap-5  ">
+  <div class="w-[92vw] px-10 flex items-center  justify-end h-20 gap-5  ">
     <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
     <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
     <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
@@ -172,9 +173,9 @@
   <!-- Main Container -->
   <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
     <!-- Left Sidebar bg-blue-200 -->
-    <aside class=" top-16 left-0 px-4 space-y-6  ">
+    <aside class=" top-16 left-0 bg-pink-400 px-4 space-y-6  ">
       <!-- Profile Picture <div class="profile-pic">-->
-        <div class="profile-pic relative fixed    ms-auto">
+        <div class="profile-pic relative fixed   ms-auto">
           <div class="aspect-square relative ">
             <!-- Inner Square -->
             <div class="absolute inset-[0px] border border-gray-800 "></div>
@@ -216,65 +217,90 @@
         </div>
       </div>
     </aside>
-  <!-- Main Content pt-8 pb-16 bg-red-200 -->
-  <main class="flex flex-col relative fixed  mb-24">
-    <!-- Main View with Bottom Padding bg-black -->
-    <div class="absolute inset-[0px] custom-gradient border border-gray-800 "></div>
-      <!-- UI Brackets -->
-      <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
-        <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
-        <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
-        <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
-    </div>
+<!-- Main Content pt-8 pb-16 bg-red-200 -->
+<main class="flex flex-col relative fixed  mb-24">
+  <!-- Main View with Bottom Padding bg-black -->
+  <div class="absolute inset-[0px]  border border-lime-800 "></div>
+    <!-- UI Brackets -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
+      <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
+      <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
+      <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
+  </div>
       <!-- Content Area -->
-      <div class=" absolute inset-[1px] flex flex-col justify-end">
-          <!-- Bottom Navigation inside Main View -->
-        <div class="flex justify-center px-12">
-          <!-- Buttons with adjusted spacing and sizing -->
-          <div class="grid grid-cols-5 gap-5 buttons-container w-[39vw]">
-            <button class="custom-button text-left uppercase nav-button" style="font-size: 1.2em;" data-target="section1">
-              Main
-            </button>
-            <button class="custom-button text-left uppercase nav-button" style="font-size: 1.2em;" data-target="section2">
-              Projects
-            </button>
-            <button class="custom-button text-left uppercase nav-button" style="font-size: 1.2em;" data-target="section3">
-              Skills
-            </button>
-            <button class="custom-button text-left uppercase nav-button" style="font-size: 1.2em;" data-target="section4">
-              About Me
-            </button>
-            <button class="custom-button text-left uppercase nav-button" style="font-size: 1.2em;" data-target="section5">
-              Contact
-            </button>
-          </div>
+  <div class=" absolute inset-[1px] flex flex-col justify-end">
+        <!-- Bottom Navigation inside Main View -->
+    <div class="flex justify-center px-12">
+    <!-- Buttons with adjusted spacing and sizing -->
+    <div class="grid grid-cols-5 gap-5 buttons-container w-[39vw]">
+      <button class="custom-button text-left uppercase nav-button" style="font-size: 1.2em;" data-target="section1">
+        Main
+      </button>
+      <button class="custom-button text-left uppercase nav-button" style="font-size: 1.2em;" data-target="section2">
+        Projects
+      </button>
+      <button class="custom-button text-left uppercase nav-button" style="font-size: 1.2em;" data-target="section3">
+        Skills
+      </button>
+      <button class="custom-button text-left uppercase nav-button" style="font-size: 1.2em;" data-target="section4">
+        About Me
+      </button>
+      <button class="custom-button text-left uppercase nav-button" style="font-size: 1.2em;" data-target="section5">
+        Contact
+      </button>
+    </div>
+    
+  <!-- lol -->
         </div>
       </div>
-    </div>
-  </main>
   
+  </main>
+    <!-- Right Sidebar -->
+
+    <aside class="">
+    
+     
+    </aside>
+
+
+  </div>
 </div>
 
+<div class="second-overlay">
+  <!-- Top Navigation Bar -->
+  <div class="w-100  px-10 flex items-center justify-end h-20 gap-5">
+  </div>
+  <!-- Main Container -->
+  <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
+    <!-- Left Sidebar -->
+    <aside class="top-16 left-0 px-4 space-y-6">
+    </aside>
+    <!-- Main Content -->
+    <main class="flex flex-col relative mb-25">
+      <div class="absolute inset-[0px]  custom-gradient">
+      </div>
+    </main>
+  </div>
+</div>
 <div class="bottom-bar fixed bottom-0 left-0 w-full  h-20 z-50"></div>
 
 
-
   <!-- Main Scrollable Content -->
-<main>
+  <!-- <main>
     <div id="section1" class="section bg-black"></div>
-    <div id="section2" class="section bg-stone-400"  ></div>
+    <div id="section2" class="section bg-stone-400" style="z-index: 99;" ></div>
     <div id="section3" class="section bg-gray-900"style="z-index: 99;"></div>
     <div id="section4" class="section bg-sky-900"style="z-index: 99;"></div>
     <div id="section5" class="section bg-emerald-900 "style="z-index: 99;"></div>
-  </main> 
-  <!-- <main>
-    <div id="section1" class="section bg-white"></div>
-    <div id="section2" class="section bg-black" ></div>
+  </main> -->
+  <main>
+    <div id="section1" class="section "></div>
+    <div id="section2" class="section " ></div>
     <div id="section3" class="section bg-black"></div>
     <div id="section4" class="section bg-black"></div>
     <div id="section5" class="section bg-black"></div>
-  </main> -->
+  </main>
 <!-- Add GSAP Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
