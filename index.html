@@ -140,12 +140,11 @@ body {
     }
     
 .third-overlay .custom-gradient {
-  position: absolute;
   inset: 0;
   z-index: 0; /* Ensure it sits beneath other elements */
-  /* background: linear-gradient(to right, #000000 0%, #4a64e81a 50%, #000000 100%); */
+  background: linear-gradient(to right, #000000 0%, #4a64e81a 50%, #000000 100%);
   /* background-color: red; */
-  background: linear-gradient(to right, #000000 0%, #1da8183a 50%, #000000 100%);
+  /* background: linear-gradient(to right, #000000 0%, #1da8183a 50%, #000000 100%); */
   opacity: 1;
   transition: opacity 0.5s ease;
 }
@@ -189,7 +188,7 @@ body {
 
 <div class="hud-overlay">
   <!-- Top Navigation Bar -->
-  <div class="w-100 px-10 flex items-center justify-end h-20 gap-5  ">
+  <div class="w-100 px-10 flex items-center justify-end h-20 gap-5  bg-black">
     <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
     <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
     <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
@@ -255,7 +254,7 @@ body {
       <!-- Content Area -->
       <div class="absolute inset-[1px] flex flex-col justify-end">
           <!-- Bottom Navigation inside Main View -->
-        <div class="flex justify-center px-12">
+        <div class="flex justify-center px-12 ">
           <!-- Buttons with adjusted spacing and sizing -->
           <div class="grid grid-cols-5 gap-5 buttons-container w-[39vw]">
             <button class="custom-button text-left uppercase nav-button" style="font-size: 1.2em;" data-target="section1">
@@ -424,27 +423,27 @@ body {
     <div id="section4" class="section bg-green-900"style="z-index: 99;"></div>
     <div id="section5" class="section bg-emerald-900 "style="z-index: 99;"></div>
   </main> -->
-<div class="bottom-bar fixed bottom-0 left-0 w-full  h-20 z-50"></div>
+<div class="bottom-bar fixed bottom-0 left-0 w-full  h-20 z-50 bg-black" ></div>
 
 
 
   <main>
       <!-- Section 1: Main -->
       <div id="section1" class="section mx-auto p-8"></div>
-      <div id="section2" class="section   mx-auto p-8 " ></div>
+      <div id="section2" class="section opacity-30  mx-auto p-8 bg-sky-900" ></div>
       
       <!-- Placeholder Sections -->
-      <div id="section3" class="section bg-gray-900 mx-auto p-8" style="z-index: 32;">
+      <div id="section3" class="section bg-gray-900 opacity-30 mx-auto p-8" style="z-index: 32;">
         <h2 class="text-3xl text-white">Skills</h2>
         <p class="text-gray-300 mt-2">Placeholder content for Skills section.</p>
       </div>
     
-      <div id="section4" class="section bg-sky-900 mx-auto p-8"style="z-index: 32;">
+      <div id="section4" class="section bg-sky-900 opacity-30 mx-auto p-8"style="z-index: 32;">
         <h2 class="text-3xl text-white">About Me</h2>
         <p class="text-gray-300 mt-2">Placeholder content for About Me section.</p>
       </div>
     
-      <div id="section5" class="section bg-emerald-900  mx-auto p-8"style="z-index: 32;">
+      <div id="section5" class="section bg-emerald-900 opacity-30 mx-auto p-8"style="z-index: 32;">
         <h2 class="text-3xl text-white">Contact</h2>
         <p class="text-gray-300 mt-2">Placeholder content for Contact section.</p>
       </div>
