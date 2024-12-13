@@ -39,7 +39,7 @@
     }
 
 body {
-  background-color: #ffffff;
+  background-color: #000000;
   /* overflow-x: hidden; */
 }
 
@@ -142,9 +142,9 @@ body {
 .third-overlay .custom-gradient {
   inset: 0;
   z-index: 0; /* Ensure it sits beneath other elements */
-  background: linear-gradient(to right, #000000 0%, #4a64e81a 50%, #000000 100%);
+  /* background: linear-gradient(to right, #0bc8e9 0%, #5f10f3 50%, #0bc8e9 100%); */
   /* background-color: red; */
-  /* background: linear-gradient(to right, #000000 0%, #1da8183a 50%, #000000 100%); */
+  background: linear-gradient(to right, #000000 0%, #1da8183a 50%, #000000 100%);
   opacity: 1;
   transition: opacity 0.5s ease;
 }
@@ -188,7 +188,7 @@ body {
 
 <div class="hud-overlay">
   <!-- Top Navigation Bar -->
-  <div class="w-100 px-10 flex items-center justify-end h-20 gap-5  bg-black">
+  <div class="w-100 px-10 flex items-center justify-end h-20 gap-5 ">
     <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
     <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
     <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
@@ -196,7 +196,7 @@ body {
   <!-- Main Container -->
   <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
     <!-- Left Sidebar bg-blue-200 -->
-    <aside class=" top-16 left-0 px-4 space-y-6 bg-red-200">
+    <aside class=" top-16 left-0 px-4 space-y-6 ">
       <!-- Profile Picture <div class="profile-pic">-->
         <div class="profile-pic relative fixed    ms-auto">
           <div class="aspect-square relative ">
@@ -304,89 +304,90 @@ body {
 
 
 
-
+<!-- 
 <div class="second-overlay ">
   <div class="w-[92vw] px-10 flex items-center justify-end h-16 gap-5">
   </div>
   <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
     <aside class=" top-16 left-0 px-4 space-y-6  ">
-      <!-- Profile Picture <div class="profile-pic">-->
-
-      <!-- Info Section bg-green-200-->
       <div class="info-section  ms-auto space-y-6  ">
       </div>
     </aside>
     <main class="flex flex-col relative mt-4 mb-20 ">
       <div class="absolute inset-[0px]  custom-gradient ">
 
-        <div id="section11" class="p-8 mx-auto bg-blue-200  " style="z-index: 32; ">
+        <div id="section11" class="p-8 mx-auto " style="z-index: 32; ">
     
-          <section class="text-white py-16 sm:py-24 " style="z-index: 32; padding-top: 100vh; height: 200vh">
-            <div class="container mx-auto px-6 lg:px-8">
-              <!-- Section Header -->
-              <div class="max-w-2xl relative ">
-                <!-- Inner Square -->
-                <div class="absolute inset-[0px] border border-gray-800"></div>
-                <!-- UI Brackets -->
-                <div class="absolute inset-0 pointer-events-none">
-                  <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
-                  <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
-                  <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
-                  <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
-                </div>
-                <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">My projects</h2>
-                <p class="mt-4 text-lg opacity-80">
-                  AAAAdipisicing elit. Modi, consequuntur recusandae. Impedit ducimus dicta modi autem aut voluptatum itaque, illo ipsam in id et similique assumenda, excepturi fugiat at numquam!
-                </p>
-              </div>
-        
-              <!-- Features Section -->
-              <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <!-- Feature 1 -->
-                <div class="flex flex-col relative">
-                  <!-- Inner Square -->
+          <div id="section2" class="p-8  mx-auto pt-24" style="z-index: 31;">
+            <section class="text-white py-16 sm:py-24 mb-12">
+              <div class="container mx-auto px-6 lg:px-8">
+                <div class="max-w-2xl relative">
                   <div class="absolute inset-[0px] border border-gray-800"></div>
-                  <!-- UI Brackets -->
                   <div class="absolute inset-0 pointer-events-none">
                     <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
                     <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
                     <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
                     <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
                   </div>
-                
-                  <h3 class="text-xl font-semibold">Lorem ipsum dolor</h3>
-                  <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white">
-                  </div>
-                  <p class="mt-2 text-sm opacity-80">
+                  <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">My projects</h2>
+                  <p class="mt-4 text-lg opacity-80">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, consequuntur recusandae. Impedit ducimus dicta modi autem aut voluptatum itaque, illo ipsam in id et similique assumenda, excepturi fugiat at numquam!
                   </p>
-                
                 </div>
-        
-                <!-- Feature 2 -->
-                <div class="flex flex-col relative">
-                  <!-- Inner Square -->
-                  <div class="absolute inset-[0px] border border-gray-800"></div>
-                  <!-- UI Brackets -->
-                  <div class="absolute inset-0 pointer-events-none">
-                    <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
-                    <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
-                    <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
-                    <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
+          
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12">
+                  <div class="flex flex-col relative">
+                    <div class="absolute inset-[0px] border border-gray-800"></div>
+                    <div class="absolute inset-0 pointer-events-none">
+                      <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
+                      <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
+                      <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
+                      <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
+                    </div>
+                
+                    <h3 class="text-xl font-semibold">Lorem ipsum dolor</h3>
+                    <p class="mt-2 text-sm opacity-80">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, consequuntur recusandae. Impedit ducimus dicta modi autem aut voluptatum itaque, illo ipsam in id et similique assumenda, excepturi fugiat at numquam!
+                    </p>
+               
                   </div>
-                  <h3 class="text-xl font-semibold">Lorem ipsum dolor</h3>
-                  <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white">
+          
+                  <div class="flex flex-col relative">
+                    <div class="absolute inset-[0px] border border-gray-800"></div>
+                    <div class="absolute inset-0 pointer-events-none">
+                      <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
+                      <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
+                      <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
+                      <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
+                    </div>
+                  
+                    <h3 class="text-xl font-semibold">Lorem ipsum dolor</h3>
+                    <p class="mt-2 text-sm opacity-80">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, consequuntur recusandae. Impedit ducimus dicta modi autem aut voluptatum itaque, illo ipsam in id et similique assumenda, excepturi fugiat at numquam!
+                    </p>
+            
                   </div>
-                  <p class="mt-2 text-sm opacity-80">
-                    Lorem ipsum dolor sr asequuntur recusatum itaque, illo ipsam in id et similique assumenda, excepturi fugiat at numquam!
-                  </p>
+          
+                  <div class="flex flex-col relative">
+                    <div class="absolute inset-[0px] border border-gray-800"></div>
+                    <div class="absolute inset-0 pointer-events-none">
+                      <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
+                      <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
+                      <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
+                      <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
+                    </div>
+                
+                    <h3 class="text-xl font-semibold">Lorem ipsum dolor</h3>
+                    <p class="mt-2 text-sm opacity-80">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, consequuntur recusandae. Impedit ducimus dicta modi autem aut voluptatum itaque, illo ipsam in id et similique assumenda, excepturi fugiat at numquam!
+                    </p>
               
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </div>
-
+            </section>
+          </div>
+           -->
 
         
         
@@ -403,27 +404,27 @@ body {
     <div id="section4" class="section bg-green-900"style="z-index: 99;"></div>
     <div id="section5" class="section bg-emerald-900 "style="z-index: 99;"></div>
   </main> -->
-<div class="bottom-bar fixed bottom-0 left-0 w-full  h-20 z-50 bg-black opacity-50" ></div>
+<div class="bottom-bar fixed bottom-0 left-0 w-full  h-20 z-50" ></div>
 
 
 
   <main>
       <!-- Section 1: Main -->
       <div id="section1" class="section mx-auto p-8"></div>
-      <div id="section2" class="section opacity-30  mx-auto p-8 bg-sky-900" ></div>
+      <div id="section2" class="section opacity-30  mx-auto p-8 " ></div>
       
       <!-- Placeholder Sections -->
-      <div id="section3" class="section bg-gray-900 opacity-30 mx-auto p-8" style="z-index: 32;">
+      <div id="section3" class="section bg-gray-900  mx-auto p-8" style="z-index: 32;">
         <h2 class="text-3xl text-white">Skills</h2>
         <p class="text-gray-300 mt-2">Placeholder content for Skills section.</p>
       </div>
     
-      <div id="section4" class="section bg-sky-900 opacity-30 mx-auto p-8"style="z-index: 32;">
+      <div id="section4" class="section bg-sky-900  mx-auto p-8"style="z-index: 32;">
         <h2 class="text-3xl text-white">About Me</h2>
         <p class="text-gray-300 mt-2">Placeholder content for About Me section.</p>
       </div>
     
-      <div id="section5" class="section bg-emerald-900 opacity-30 mx-auto p-8"style="z-index: 32;">
+      <div id="section5" class="section bg-emerald-900  mx-auto p-8"style="z-index: 32;">
         <h2 class="text-3xl text-white">Contact</h2>
         <p class="text-gray-300 mt-2">Placeholder content for Contact section.</p>
       </div>
