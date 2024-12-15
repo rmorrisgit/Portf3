@@ -39,8 +39,17 @@
     }
 
 body {
-  background-color: #000000;
+  background-color: #181522;
   /* overflow-x: hidden; */
+}
+.third-overlay .custom-gradient {
+  inset: 0;
+  z-index: 0; /* Ensure it sits beneath other elements */
+  /* background: linear-gradient(to right, #0bc8e9 0%, #5f10f3 50%, #0bc8e9 100%); */
+  background-color: rgba(255, 0, 242, 0.116);
+  /* background: linear-gradient(to right, #b6b6b600 0%, #49a2b85e 50%, #b6b6b600 100%); */
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 .profile-pic {
@@ -66,132 +75,79 @@ body {
   }  */
 
   .custom-button {
-  background-color: rgb(43, 43, 43) ;
+    background-color: rgb(43, 43, 43) ;
 
-  font-family: 'Big Shoulders Display';
-  font-weight: 600;
-  padding: 0.9rem 0.6rem; /* Reduce vertical padding (top and bottom) */
-  transition: background-color 0.3s ease, color 0.3s ease;
-  letter-spacing: 2px;
-  white-space: nowrap;
-  line-height: .3; /* Adjust line-height to tighten spacing */
-}
-
-.custom-button:hover {
-  background-color: rgb(255, 255, 255); /* Darker background on hover */
-  color: #000000; /* Text color changes to white on hover */
- cursor: pointer;
-}
-/* Default width */
-
-
-.active {
-      background-color: #828283;
-      color: white;
-    }
-
-    .scroll-container {
-      height: 500vh; /* 5 viewport heights */
-      position: relative;
-    }
-
-    .section {
-      height: 100vh; /* Each section spans 1 viewport height */
-      position: relative;
-    }
-
-
-    .hud-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      z-index: 92; 
-
-    }
-.second-overlay .custom-gradient {
-  position: absolute;
-  inset: 0;
-  z-index: 0; /* Ensure it sits beneath other elements */
-  /* background: linear-gradient(to right, #000000 0%, #4a64e81a 50%, #000000 100%); */
-  /* background-color: red; */
- 
-  /* background: linear-gradient(to right, #000000 0%, #ff0c0c69 50%, #000000 100%); */
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-.second-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-
-      z-index: 32; /* Lower z-index to render under hud-overlay */
-      pointer-events: none; /* Make it non-interactive if needed */
-    }
-.third-overlay {
-  position: fixed;
-     top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 32; /* Lower z-index to render under hud-overlay */
-      pointer-events: none; /* Make it non-interactive if needed */
-    }
-    
-.third-overlay .custom-gradient {
-  inset: 0;
-  z-index: 0; /* Ensure it sits beneath other elements */
-  /* background: linear-gradient(to right, #0bc8e9 0%, #5f10f3 50%, #0bc8e9 100%); */
-  /* background-color: red; */
-  background: linear-gradient(to right, #000000 0%, #1da8183a 50%, #000000 100%);
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-
-@media (min-width: 1600px) {
-  /* Styles for screens larger than 1600px */
- 
-}
-
-/* Medium screens (e.g., tablets) */
-@media (max-width: 1440px) {
-  .custom-button {
-    /* background-color: rgb(53, 226, 53); */
+    font-family: 'Big Shoulders Display';
+    font-weight: 600;
+    padding: 0.9rem 0.6rem; /* Reduce vertical padding (top and bottom) */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    line-height: .3; /* Adjust line-height to tighten spacing */
   }
-  .buttons-container {
-    /* background-color: rgb(255, 251, 0); */
-    /* gap: 5px !important */
+  .custom-button:hover {
+    background-color: rgb(255, 255, 255); /* Darker background on hover */
+    color: #000000; /* Text color changes to white on hover */
+    cursor: pointer;
   }
-}
-@media (max-width: 1440px) {
-  .custom-button {
-    /* background-color: rgb(53, 226, 53); */
+  .active {
+    background-color: #6ed460;
+    color: white;
   }
- 
-}
-/* Small screens (e.g., phones) */
-@media (max-width: 768px) {
-
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-
-}
-
-
-  </style>
+  .scroll-container {
+    height: 500vh; /* 5 viewport heights */
+    position: relative;
+  }
+  .section {
+    height: 100vh; /* Each section spans 1 viewport height */
+    position: relative;
+  }
+  .hud-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 92; 
+  }
+  .second-overlay .custom-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 0; /* Ensure it sits beneath other elements */
+    /* background: linear-gradient(to right, #000000 0%, #4a64e81a 50%, #000000 100%); */
+    /* background-color: red; */
+  
+    /* background: linear-gradient(to right, #000000 0%, #ff0c0c69 50%, #000000 100%); */
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  .second-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 32; /* Lower z-index to render under hud-overlay */
+    pointer-events: none; /* Make it non-interactive if needed */
+  }
+  .third-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 32; /* Lower z-index to render under hud-overlay */
+    pointer-events: none; /* Make it non-interactive if needed */
+  }
+  .cardProj {
+    max-height: 450px;
+  }
+</style>
 </head>
 <body class="text-white min-h-screen font-sans">
 
 <div class="hud-overlay">
   <!-- Top Navigation Bar -->
   <div class="w-100 px-10 flex items-center justify-end h-20 gap-5 ">
-    <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
-    <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
-    <button class="mt-4 uppercase hover:text-gray-400" style=" font-size: .8em">Button</button>
+<p>hey</p>
   </div>
   <!-- Main Container -->
   <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
@@ -277,35 +233,25 @@ body {
       </div>
     </div>
   </main>
-  
 </div>
 
 <div class="third-overlay">
-  <!-- Top Navigation Bar -->
   <div class="w-[92vw] px-10 flex items-center justify-end h-16 gap-5">
   </div>
-  <!-- Main Container -->
   <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
-    <!-- Left Sidebar -->
     <aside class=" top-16 left-0 px-4 space-y-6  ">
-      <!-- Profile Picture <div class="profile-pic">-->
-
-      <!-- Info Section bg-green-200-->
       <div class="info-section  ms-auto space-y-6  ">
       </div>
     </aside>
-    <!-- Main Content -->
     <main class="flex flex-col relative mt-4 mb-20 ">
-      <div class="absolute inset-[0px] custom-gradient ">
+      <div class="absolute inset-[0px]  ">
       </div>
     </main>
   </div>
 </div>
 
 
-
-<!-- 
-<div class="second-overlay ">
+<div class="second-overlay " style="margin-top: 100vh;">
   <div class="w-[92vw] px-10 flex items-center justify-end h-16 gap-5">
   </div>
   <div class="grid" style="grid-template-columns: 1.8fr 8.4fr 1.8fr; min-height: calc(100vh - 4rem);">
@@ -314,29 +260,17 @@ body {
       </div>
     </aside>
     <main class="flex flex-col relative mt-4 mb-20 ">
-      <div class="absolute inset-[0px]  custom-gradient ">
-
+      <div class="absolute inset-[0px]   ">
         <div id="section11" class="p-8 mx-auto " style="z-index: 32; ">
-    
           <div id="section2" class="p-8  mx-auto pt-24" style="z-index: 31;">
             <section class="text-white py-16 sm:py-24 mb-12">
               <div class="container mx-auto px-6 lg:px-8">
                 <div class="max-w-2xl relative">
-                  <div class="absolute inset-[0px] border border-gray-800"></div>
-                  <div class="absolute inset-0 pointer-events-none">
-                    <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
-                    <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-white"></div>
-                    <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
-                    <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
-                  </div>
-                  <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">My projects</h2>
-                  <p class="mt-4 text-lg opacity-80">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, consequuntur recusandae. Impedit ducimus dicta modi autem aut voluptatum itaque, illo ipsam in id et similique assumenda, excepturi fugiat at numquam!
-                  </p>
+                  <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Projects</h2>
                 </div>
           
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12">
-                  <div class="flex flex-col relative">
+                  <div class="flex flex-col relative p-4 cardProj">
                     <div class="absolute inset-[0px] border border-gray-800"></div>
                     <div class="absolute inset-0 pointer-events-none">
                       <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
@@ -344,15 +278,13 @@ body {
                       <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
                       <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
                     </div>
-                
                     <h3 class="text-xl font-semibold">Lorem ipsum dolor</h3>
                     <p class="mt-2 text-sm opacity-80">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, consequuntur recusandae. Impedit ducimus dicta modi autem aut voluptatum itaque, illo ipsam in id et similique assumenda, excepturi fugiat at numquam!
                     </p>
-               
                   </div>
           
-                  <div class="flex flex-col relative">
+                  <div class="flex flex-col relative p-4 cardProj">
                     <div class="absolute inset-[0px] border border-gray-800"></div>
                     <div class="absolute inset-0 pointer-events-none">
                       <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
@@ -360,15 +292,13 @@ body {
                       <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
                       <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
                     </div>
-                  
                     <h3 class="text-xl font-semibold">Lorem ipsum dolor</h3>
                     <p class="mt-2 text-sm opacity-80">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, consequuntur recusandae. Impedit ducimus dicta modi autem aut voluptatum itaque, illo ipsam in id et similique assumenda, excepturi fugiat at numquam!
                     </p>
-            
                   </div>
           
-                  <div class="flex flex-col relative">
+                  <div class="flex flex-col relative p-4 cardProj ">
                     <div class="absolute inset-[0px] border border-gray-800"></div>
                     <div class="absolute inset-0 pointer-events-none">
                       <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-white"></div>
@@ -376,22 +306,16 @@ body {
                       <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white"></div>
                       <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white"></div>
                     </div>
-                
                     <h3 class="text-xl font-semibold">Lorem ipsum dolor</h3>
                     <p class="mt-2 text-sm opacity-80">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, consequuntur recusandae. Impedit ducimus dicta modi autem aut voluptatum itaque, illo ipsam in id et similique assumenda, excepturi fugiat at numquam!
                     </p>
-              
                   </div>
                 </div>
               </div>
             </section>
           </div>
-           -->
-
-        
-        
-
+          </div>
       </div>
     </main>
   </div>
@@ -406,31 +330,18 @@ body {
   </main> -->
 <div class="bottom-bar fixed bottom-0 left-0 w-full  h-20 z-50" ></div>
 
-
-
   <main>
       <!-- Section 1: Main -->
       <div id="section1" class="section mx-auto p-8"></div>
-      <div id="section2" class="section opacity-30  mx-auto p-8 " ></div>
-      
+      <div id="section2" class="section  mx-auto p-8 " ></div>
       <!-- Placeholder Sections -->
-      <div id="section3" class="section bg-gray-900  mx-auto p-8" style="z-index: 32;">
-        <h2 class="text-3xl text-white">Skills</h2>
-        <p class="text-gray-300 mt-2">Placeholder content for Skills section.</p>
+      <div id="section3" class="section mx-auto p-8" style="z-index: 32;">
       </div>
-    
       <div id="section4" class="section bg-sky-900  mx-auto p-8"style="z-index: 32;">
-        <h2 class="text-3xl text-white">About Me</h2>
-        <p class="text-gray-300 mt-2">Placeholder content for About Me section.</p>
       </div>
-    
       <div id="section5" class="section bg-emerald-900  mx-auto p-8"style="z-index: 32;">
-        <h2 class="text-3xl text-white">Contact</h2>
-        <p class="text-gray-300 mt-2">Placeholder content for Contact section.</p>
       </div>
     </main>
-    
-
 
 <!-- 
     <div id="section3" class="section bg-gray-900"style="z-index: 111;"></div>
